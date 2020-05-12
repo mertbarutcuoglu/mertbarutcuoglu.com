@@ -12,7 +12,7 @@ class Post(models.Model):
     status = models.IntegerField(choices=STATUS, default=0)
 
     class Meta:
-        order_by = ['-published_on']
-        
+        ordering = ['-published_on']
+
     def __str__(self):
         return self.title

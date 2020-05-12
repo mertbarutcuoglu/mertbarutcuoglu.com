@@ -1,9 +1,9 @@
 from django.contrib import admin
-from django.urls import path
+from django.urls import path, include
 
-from portfolio.views import projects_view
+from portfolio.views import ProjectList
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('projects', projects_view),
+    path('', include('portfolio.urls')),
 ]

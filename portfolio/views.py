@@ -1,7 +1,6 @@
-from django.shortcuts import render
+from django.views import generic
 from .models import Project
 
-def projects_view(request, *args, **kwargs):
-    projects = Project.objects.order_by('id')
-    return render(request, "projects.html", {'projects': projects})
-
+class ProjectList(generic.ListView):
+    queryset = Project.objects.order_by('id')
+    template_name = 'projects.html'
