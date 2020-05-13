@@ -13,42 +13,47 @@
     <!-- FontAwesome -->
     <script src="https://kit.fontawesome.com/440c024ef4.js" crossorigin="anonymous"></script>
 
-     <!-- Typewriter Effects -->
+    <!-- Typewriter Effects -->
     <script src="{% static 'javascript/typewriter.js' %}"></script>
-    
-    <title>Hello, world!</title>
 
-    <nav class="navbar navbar-light bg-light">
+    <!-- Tiny MCE -->
+    <script src="https://cdn.tiny.cloud/1/no-api-key/tinymce/5/tinymce.min.js" referrerpolicy="origin"></script>
+
+
+    <title>Hello, world!</title>
+</head>
+<header>
+    <nav class="navbar navbar-light bg-white">
         <a class="navbar-brand" href="#">
             <img src="{% static 'images/logo.png' %}" width="30" height="30" class="d-inline-block align-top" alt="">
             Hi, I'm Mert.
         </a>
     </nav>
-</head>
+</header>
 
 <body>
     {% block content %}
     {% endblock %}
-</body>
 
-<footer class="page-footer font-small pt-5">
-    <div class="d-flex justify-content-center pt-4 mb-4" style="border-top: 1px solid lightgray;">
-        <a href="https://twitter.com/barutcuoglumert">
-            <i class="fab fa-twitter fa-lg mr-5 fa-2x"> </i>
-        </a>
-        <a href="https://www.linkedin.com/in/kadir-mert-barutçuoğlu-634055bb/">
-            <i class="fab fa-linkedin-in fa-lg mr-5 fa-2x"> </i>
-        </a>
-        <a href="http://github.com/mertbarutcuoglu">
-            <i class="fab fa-github-square fa-lg mr-5 fa-2x"> </i>
-        </a>
-        <a href="mailto:kbarutcu@students.cs.ubc.ca">
-        <i class="fas fa-envelope fa-lg fa-2x"> </i>
-        </a>
-    </div>
-    <div class="text-center mb-2">
-        Made with <i class="fa fa-heart pulse" style="color: #E90606;"></i> in <b>Vancouver</b>
-    </div>
-</footer>
+    <footer class="font-small pt-5">
+        <div class="d-flex justify-content-center pt-4 mb-3" style="border-top: 1px solid lightgray;">
+            <a href="https://twitter.com/barutcuoglumert">
+                <i class="fab fa-twitter fa-lg mr-5 fa-2x"></i>
+            </a>
+            <a href="https://www.linkedin.com/in/kadir-mert-barutçuoğlu-634055bb/">
+                <i class="fab fa-linkedin-in fa-lg mr-5 fa-2x"> </i>
+            </a>
+            <a href="http://github.com/mertbarutcuoglu">
+                <i class="fab fa-github-square fa-lg mr-5 fa-2x"> </i>
+            </a>
+            <a href="mailto:kbarutcu@students.cs.ubc.ca">
+                <i class="fas fa-envelope fa-lg fa-2x"> </i>
+            </a>
+        </div>
+        <div class="text-center mb-2">
+            Made with <i class="fa fa-heart pulse" style="color: #E90606;"></i> in <b>Vancouver</b>
+        </div>
+    </footer>
+</body>
 
 </html>

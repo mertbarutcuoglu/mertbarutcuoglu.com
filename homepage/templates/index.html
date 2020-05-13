@@ -27,9 +27,11 @@
             {% for section in sections %}
             <div class="col-sm-4">
                 <div class="card" style="height:290px; width: 352px;">
-                    <img src="unnamed.jpg" class="card-img-top" width="352" height="198" alt="...">
+                    <img src="{{section.image.url}}" class="card-img-top" width="352" height="198" alt="...">
                     <div class="card-body">
-                        <h5 class="card-title">{{section.title}}&#{{section.section_emoji}};</h5>
+                        <a href="{{section.links_to}}">
+                            <h5 class="card-title">{{section.title}}&#{{section.section_emoji}};</h5>
+                        </a>
                         <p class="card-text">{{section.description}}</p>
                     </div>
                 </div>

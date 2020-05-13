@@ -15,5 +15,6 @@ class Bio(models.Model):
 class Section(models.Model):
     title = models.CharField(max_length=50)
     description = models.CharField(max_length=50)
-    #image = models.ImageField(upload_to='images')
+    image = models.ImageField(null=True)
     section_emoji = models.IntegerField() # dec value for emoji
+    links_to = models.CharField(max_length=50)
