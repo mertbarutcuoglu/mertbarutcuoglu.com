@@ -1,10 +1,10 @@
 {% extends 'base.html' %}
-
+{% load static %}
 {% block content %}
 <div class="px-4 container">
     <div class="my-5 container" id="welcome-container">
         <div class="row">
-            <img class="mt-5" src="logo.png" width="124" height="124" alt="">
+            <img class="mt-5" src="{% static 'images/logo.png' %}" width="124" height="124" alt="">
         </div>
         <div class="mt-4 row">
             <h1>Hi, I&nbsp;</h1>
