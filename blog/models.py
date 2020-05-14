@@ -7,6 +7,7 @@ STATUS = (
 
 class Post(models.Model):
     title = models.CharField(max_length=100)
+    sub_title = models.CharField(max_length=200)
     slug = models.SlugField()
     content = models.TextField()
     created_on = models.DateTimeField(auto_now_add=True)
