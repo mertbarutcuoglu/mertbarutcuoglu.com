@@ -16,5 +16,11 @@ class Post(models.Model):
     class Meta:
         ordering = ['-created_on']
 
+    @property
+    def estimated_reading_time(self):
+       word_count = len(self.content.split())
+       reading_time = round(word_count/250)
+       return reading_time
+ 
     def __str__(self):
         return self.title

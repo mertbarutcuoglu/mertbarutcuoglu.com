@@ -6,7 +6,7 @@
     <div class="container mb-3">
         <h2>{{object.title}}</h2>
         <h4 style="color:gray;">{{object.sub_title}}</h4>
-        <h6 style="color:grey;"> {{object.created_on}}</h6>
+        <h6 style="color:grey;"> {{object.created_on | date:'M d, Y'}} - {{object.estimated_reading_time}} min read</h6>
     </div>
     <div class="container">
         <p style="line-height: 1.8;">
