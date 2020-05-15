@@ -17,4 +17,4 @@ class Section(models.Model):
     description = models.CharField(max_length=50)
     image = models.ImageField(null=True)
     section_emoji = models.IntegerField() # dec value for emoji
-    links_to = models.CharField(max_length=50)
+    links_to = models.URLField()
