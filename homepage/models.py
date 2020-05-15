@@ -18,3 +18,6 @@ class Section(models.Model):
     image = models.ImageField(null=True)
     section_emoji = models.IntegerField() # dec value for emoji
     links_to = models.URLField()
+
+    def __str__(self):
+        return self.title
