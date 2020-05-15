@@ -4,3 +4,4 @@ blog/__pycache__
 homepage/__pycache__
 mertbarutcuoglu/__pycache__
 portfolio/__pycache__
+db.sqlite3
