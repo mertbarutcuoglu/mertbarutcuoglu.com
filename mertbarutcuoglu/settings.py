@@ -11,22 +11,16 @@ https://docs.djangoproject.com/en/3.0/ref/settings/
 """
 
 import os
+import django_heroku
 
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
+SECRET_KEY = os.environ["SECRET_KEY"]
 
-# Quick-start development settings - unsuitable for production
-# See https://docs.djangoproject.com/en/3.0/howto/deployment/checklist/
+DEBUG = os.environ.get('DEBUG_VALUE', '') != 'False'
 
-# SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = '3xf5=k@t8vjrrl$6f3h$f8x*563t4j#4lzl(2a=u#%o2t$&m1='
-
-# SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
-
-ALLOWED_HOSTS = []
-
+ALLOWED_HOSTS = ['mertbarutcuoglu.herokuapp.com', '127.0.0.1']
 
 # Application definition
 
@@ -51,6 +45,7 @@ MIDDLEWARE = [
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
+    'whitenoise.middleware.WhiteNoiseMiddleware',
 ]
 
 ROOT_URLCONF = 'mertbarutcuoglu.urls'
@@ -117,6 +112,7 @@ USE_L10N = True
 
 USE_TZ = True
 
+STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
 STATIC_URL = '/static/'
 STATICFILES_DIRS = [
     os.path.join(BASE_DIR, 'static'),
@@ -127,5 +123,6 @@ MEDIA_ROOT = os.path.join(BASE_DIR, 'static/images')
 
 X_FRAME_OPTIONS = 'SAMEORIGIN'
 
+STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
 
-
+django_heroku.settings(locals())
