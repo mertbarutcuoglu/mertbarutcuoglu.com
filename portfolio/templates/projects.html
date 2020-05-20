@@ -11,13 +11,13 @@
                     <h6 class="card-subtitle mb-2 text-muted">{{project.sub_title}}</h6>
                     <p class="card-text">{{project.description}}</p>
                     <div class="row">
-                        <div class="col-sm-6">
+                        <div class="col-sm-9">
                             {% for technology in project.used_technologies.all %}
                             <b class="px-2 py-1"
                                 style="color: white; background-color: #3f67b3; border-radius: 5px;">{{technology.title}}</b>
                             {% endfor %}
                         </div>
-                        <div class="col-sm-6 ">
+                        <div class="col-sm-3">
                             {% if project.is_on_blog %}
                             <a href={{project.blog_link}} style="color:inherit;"><i class="ml-4 float-right fas fa-angle-right fa-2x"></i></a>
                             {% endif %}
