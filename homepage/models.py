@@ -29,7 +29,7 @@ class Section(models.Model):
 
         output = BytesIO()
 
-        im = im.resize((290, 352))
+        im = im.resize((352, 198))
 
         im.save(output, format='JPEG', quality=95)
         output.seek(0)
