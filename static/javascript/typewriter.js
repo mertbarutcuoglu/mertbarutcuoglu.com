@@ -27,7 +27,6 @@ TxtType.prototype.tick = function () {
     if (this.isDeleting) { delta /= 2; }
 
     if (!this.isDeleting && this.txt === fullTxt && this.loopNum != 2) {
-        console.log(this.loopNum);
         delta = this.period;
         this.isDeleting = true;
     } else if (this.isDeleting && this.txt === '') {
